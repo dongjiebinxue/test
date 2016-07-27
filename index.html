@@ -1,50 +1,428 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>zx</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <meta name="renderer" content="webkit|ie-stand|ie-comp" />
+    <title>ZX-UI</title>
+    <meta name="keywords" content="zxui"/>
+    <meta name="description" content="zxui"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="description" content="sean">
-    <meta name="keywords" content="HTML, CSS, JS, JavaScript, framework, bootstrap, front-end, frontend, web development">
-    <meta name="author" content="Sean">
-    <link href="dep/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="dep/bootstrap/css/bootstrap-combined.min.css" rel="stylesheet">
-    <link rel="icon" href="favicon.ico">
+    <link href="dep/ace/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="dep/ace/css/font-awesome.min.css"/>
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="dep/ace/css/font-awesome-ie7.min.css"/>
+    <![endif]-->
+    <link rel="stylesheet" href="dep/ace/css/ace.min.css"/>
+    <link rel="stylesheet" href="dep/ace/css/ace-rtl.min.css"/>
+    <link rel="stylesheet" href="dep/fullpage/css/jquery.fullPage.css"/>
+    <link rel="stylesheet" href="src/css/defalut.css"/>
+    <link rel="stylesheet" href="src/css/css.css"/>
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="dep/ace/css/ace-ie.min.css"/>
+    <![endif]-->
+    <!--[if lt IE 9]>
+    <script src="dep/ace/js/html5shiv.js"></script>
+    <script src="dep/ace/js/respond.min.js"></script>
+    <![endif]-->
 </head>
-<body>
-<h1>
-    <div class="container-fluid">
-        <div class="row-fluid">
-            <div class="span12">
-                <div class="hero-unit">
-                    <h1>
-                        ZX-UI欢迎您!
-                    </h1>
-                    <p>
-                        我是一名WEB前端工程师，初出茅庐，多多关照！
-                    </p>
-                    <p>
-                        <a class="btn btn-primary btn-large" href="#">参看更多 »</a>
-                    </p>
+
+<body class="login-layout">
+<div  id="testDiv">
+<div class="section">
+    <div class="row">
+        <div class="navbar navbar-default login-navbar">
+            <div class="navbar-container">
+                <div class="navbar-header pull-left">
+                    <a href="#" class="navbar-brand login-navbar-brand">
+                        <small>
+                            <i class="icon-leaf"></i>
+                            ZX-UI
+                        </small>
+                    </a>
                 </div>
             </div>
         </div>
-        <div class="row-fluid">
-            <div class="span2">
-            </div>
-            <div class="span6">
-            </div>
-            <div class="span4">
+    </div>
+    <div class="row index-background">
+        <div class="col-sm-6">
+            <div class="left-container left-container-desc">
+                <div class="image-container">
+                    <img alt="Stop coding, start amazing."
+                         class="stop-amazing-img left-container-item"
+                         src="https://code.aliyun.com/assets/index-first-amazing-ad891e21703ba4f0a4332f93fc58c995.svg">
+                </div>
+                <div class="image-container">
+                    <img alt="" style="margin-top: 40px;"
+                         class="description-img left-container-item"
+                         src="https://code.aliyun.com/assets/index-first-description-7a4888aee9f1137c14fd5ab2ab3de8be.svg">
+                </div>
             </div>
         </div>
-        <div class="row-fluid">
-            <div class="span12">
+        <div class="col-sm-6">
+            <div class="login-container">
+                <div class="center">
+                    <h1>
+                        <i class="icon-leaf green"></i>
+                        <span class="red">ZX-UI</span>
+                        <span class="white" style="font-size: 30px;">XXXX管理平台</span>
+                    </h1>
+                </div>
+                <div class="position-relative">
+                    <div id="login-box"
+                         class="login-box visible widget-box no-border">
+                        <div class="widget-body">
+                            <div class="widget-main">
+                                <h4 class="header blue lighter bigger">
+                                    <i class="icon-coffee green"></i>
+                                    请输入您的用户信息
+                                </h4>
+                                <div class="space-6"></div>
+                                <form>
+                                    <fieldset>
+                                        <label class="block clearfix">
+														<span class="block input-icon input-icon-right">
+															<input type="text" id="username"
+                                                                   class="form-control"
+                                                                   placeholder="用户名"/>
+															<i class="icon-user"></i>
+														</span>
+                                        </label>
+                                        <label class="block clearfix">
+														<span class="block input-icon input-icon-right">
+															<input type="password" id="passwd"
+                                                                   class="form-control"
+                                                                   placeholder="密码"/>
+															<i class="icon-lock"></i>
+														</span>
+                                        </label>
+                                        <div class="space"></div>
+                                        <div class="clearfix">
+                                            <label class="inline">
+                                                <input type="checkbox"
+                                                       class="ace"/>
+                                                <span class="lbl">记住我</span>
+                                            </label>
+
+                                            <button type="button"
+                                                    onclick="login()"
+                                                    class="width-35 pull-right btn btn-sm btn-primary">
+                                                <i class="icon-key"></i>
+                                                登录
+                                            </button>
+                                        </div>
+
+                                        <div class="space-4"></div>
+                                    </fieldset>
+                                </form>
+                                <div class="social-or-login center">
+                                    <span class="bigger-110">其它登录</span>
+                                </div>
+                                <div class="social-login center">
+                                    <a class="btn btn-primary">
+                                        <i class="icon-facebook"></i>
+                                    </a>
+                                    <a class="btn btn-info">
+                                        <i class="icon-twitter"></i>
+                                    </a>
+                                    <a class="btn btn-danger">
+                                        <i class="icon-google-plus"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="toolbar clearfix">
+                                <div>
+                                    <a href="#"
+                                       onclick="show_box('forgot-box'); return false;"
+                                       class="forgot-password-link">
+                                        <i class="icon-arrow-left"></i>
+                                        找回密码
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#"
+                                       onclick="show_box('signup-box'); return false;"
+                                       class="user-signup-link">
+                                        免费注册
+                                        <i class="icon-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="forgot-box"
+                         class="forgot-box widget-box no-border">
+                        <div class="widget-body">
+                            <div class="widget-main">
+                                <h4 class="header red lighter bigger">
+                                    <i class="icon-key"></i>
+                                    找回密码
+                                </h4>
+
+                                <div class="space-6"></div>
+                                <p>
+                                    输入您的邮箱地址
+                                </p>
+
+                                <form>
+                                    <fieldset>
+                                        <label class="block clearfix">
+														<span class="block input-icon input-icon-right">
+															<input type="email"
+                                                                   class="form-control"
+                                                                   placeholder="邮箱地址"/>
+															<i class="icon-envelope"></i>
+														</span>
+                                        </label>
+
+                                        <div class="clearfix">
+                                            <button type="button"
+                                                    class="width-35 pull-right btn btn-sm btn-danger">
+                                                <i class="icon-lightbulb"></i>
+                                                发送给我！
+                                            </button>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div><!-- /widget-main -->
+
+                            <div class="toolbar center">
+                                <a href="#"
+                                   onclick="show_box('login-box'); return false;"
+                                   class="back-to-login-link">
+                                    返回到登录
+                                    <i class="icon-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div><!-- /widget-body -->
+                    </div><!-- /forgot-box -->
+
+                    <div id="signup-box"
+                         class="signup-box widget-box no-border">
+                        <div class="widget-body">
+                            <div class="widget-main">
+                                <h4 class="header green lighter bigger">
+                                    <i class="icon-group blue"></i>
+                                    用户注册
+                                </h4>
+
+                                <div class="space-6"></div>
+                                <p> 输入您的详情: </p>
+
+                                <form>
+                                    <fieldset>
+                                        <label class="block clearfix">
+														<span class="block input-icon input-icon-right">
+															<input type="email"
+                                                                   class="form-control"
+                                                                   placeholder="邮箱地址"/>
+															<i class="icon-envelope"></i>
+														</span>
+                                        </label>
+
+                                        <label class="block clearfix">
+														<span class="block input-icon input-icon-right">
+															<input type="text"
+                                                                   class="form-control"
+                                                                   placeholder="用户名"/>
+															<i class="icon-user"></i>
+														</span>
+                                        </label>
+
+                                        <label class="block clearfix">
+														<span class="block input-icon input-icon-right">
+															<input type="password"
+                                                                   class="form-control"
+                                                                   placeholder="密码"/>
+															<i class="icon-lock"></i>
+														</span>
+                                        </label>
+
+                                        <label class="block clearfix">
+														<span class="block input-icon input-icon-right">
+															<input type="password"
+                                                                   class="form-control"
+                                                                   placeholder="重复密码"/>
+															<i class="icon-retweet"></i>
+														</span>
+                                        </label>
+
+                                        <label class="block">
+                                            <input type="checkbox" class="ace"/>
+														<span class="lbl">
+															我同意
+															<a
+                                                                    href="#">
+                                                                《关于户协议》
+                                                            </a>
+														</span>
+                                        </label>
+
+                                        <div class="space-24"></div>
+
+                                        <div class="clearfix">
+                                            <button type="reset"
+                                                    class="width-30 pull-left btn btn-sm">
+                                                <i class="icon-refresh"></i>
+                                                重置
+                                            </button>
+
+                                            <button type="button"
+                                                    class="width-65 pull-right btn btn-sm btn-success">
+                                                注册
+                                                <i class="icon-arrow-right icon-on-right"></i>
+                                            </button>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+
+                            <div class="toolbar center">
+                                <a href="#"
+                                   onclick="show_box('login-box'); return false;"
+                                   class="back-to-login-link">
+                                    <i class="icon-arrow-left"></i>
+                                    返回到登录
+                                </a>
+                            </div>
+                        </div><!-- /widget-body -->
+                    </div><!-- /signup-box -->
+                </div><!-- /position-relative -->
             </div>
         </div>
     </div>
-</h1>
-<script src="dep/jquery.min.js"></script>
-<script src="dep/bootstrap/bootstrap.min.js"></script>
+</div>
+<div class="section">
+    <div class="row ifly-first-page">
+        <div class="first-bottom ">
+            <div class="body">
+                <div class="image-container">
+                    <img alt="Design for Developers" calss=""
+                         src="https://code.aliyun.com/assets/title-developers-23c21fedba325e2c083e668ee7d5c198.svg">
+                </div>
+                <div class="ul">
+                    <div class="col-xs-3 ifly-title">
+                        <img alt="安全的云端存储"
+                             src="https://code.aliyun.com/assets/title-cloud-2820c44f4e36e4765d7bd412895798a3.svg">
+                    </div>
+                    <div class="col-xs-3 ifly-title">
+                        <img alt="快速稳定的服务"
+                             src="https://code.aliyun.com/assets/title-fast-ef6b12da1e1c28a40f1c091a10cdcbf1.svg">
+                    </div>
+                    <div class="col-xs-3 ifly-title">
+                        <img alt="易用的在线浏览"
+                             src="https://code.aliyun.com/assets/title-computer-8f25258b6a737a93f76fca6105074f13.svg">
+                    </div>
+                    <div class="col-xs-3 ifly-title">
+                        <img alt="灵活的协作开发"
+                             src="https://code.aliyun.com/assets/title-coop-2ca592f5ead25fa23859d1dc68d7eb89.svg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="second-middle ">
+            <div class="desc-pics">
+                <div class="col-xs-3 text-center">
+                    <img class="icon cloud"
+                         src="https://code.aliyun.com/assets/icon-cloud-c6a4fb5f2b45e4ed15782def1551361b.svg">
+                    <img alt=""
+                         class="desc cloud"
+                         src="https://code.aliyun.com/assets/desc-cloud-ff30909ee095c2db74d192ad9a5699a0.svg">
+                </div>
+                <div class="col-xs-3 text-center">
+                    <img class="icon fast"
+                         src="https://code.aliyun.com/assets/icon-fast-1e4fb82b2aebfcb35c98ae31f53b172e.svg">
+                    <img alt=""
+                         class="desc fast"
+                         src="https://code.aliyun.com/assets/desc-fast-8526fcf2c6178045e694c4f9230fd0c5.svg">
+                </div>
+                <div class="col-xs-3 text-center">
+                    <img class="icon computer"
+                         src="https://code.aliyun.com/assets/icon-computer-e42416e0304ff3ce3ba7589ac12dcc59.svg">
+                    <img alt=""
+                         class="desc computer"
+                         src="https://code.aliyun.com/assets/desc-computer-13daf0fbad40b82f2c5edea4aea37f25.svg">
+                </div>
+                <div class="col-xs-3 text-center">
+                    <img class="icon travel"
+                         src="https://code.aliyun.com/assets/icon-coop-0fa331111ee5f2af0e671ae8b4970170.svg">
+                    <img alt=""
+                         class="desc travel"
+                         src="https://code.aliyun.com/assets/desc-coop-ff30909ee095c2db74d192ad9a5699a0.svg">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section">
+    <div class="row ifly-first-page">
+        <div class="second-bottom ">
+            <div class="image-container">
+                <img alt="Last but not Least" class="bottom-pic"
+                     src="https://code.aliyun.com/assets/last-but-not-least-11f9ef99ab8dabf19e5085105eef7852.svg">
+            </div>
+        </div>
+        <div class="third-middle ">
+            <div class="left-container">
+                <img class="commit"
+                     src="src/css/img/first/temp2.png">
+                <img class="workflow"
+                     src="src/css/img/first/temp1.png">
+            </div>
+            <div class="right-container">
+                <div class="image-container">
+                    <img alt="" class="intergretion"
+                         src="https://code.aliyun.com/assets/index-third-intergretion-51e6d1d4ca14f0a321da2476050e8f13.svg">
+                    <img alt=""
+                         class="bullets"
+                         src="https://code.aliyun.com/assets/index-third-bullets-635ff6ceadc4812ac386af0d44345773.svg">
+                    <div class="more-container">
+                        <a href="javascript:void(0)">
+                            <img alt="了解更多" class="more"
+                                 src="src/css/img/first/more.svg">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="third-bottom">
+            <div class="contract-info">
+                <span>声明：以上内容仅为个人学习</span>
+                <p>网站备案编号：XXXXXXXX</p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!--[if !IE]> -->
+<script src="dep/ace/js/jquery-2.0.3.min.js"></script>
+<!-- <![endif]-->
+<!--[if IE]>
+<script src="dep/ace/js/jquery-1.10.2.min.js"></script>
+<![endif]-->
+<script type="text/javascript">
+    if ("ontouchend" in document) document.write("<script src='dep/ace/js/jquery.mobile.custom.min.js'>" + "<" + "/script>");
+</script>
+<script src="dep/fullpage/js/jquery.fullPage.js"></script>
+<script type="text/javascript">
+    function show_box(id) {
+        $('.widget-box.visible').removeClass('visible');
+        $('#' + id).addClass('visible');
+    }
+    function login() {
+        var name = $("#username").val();
+        var pwd = $("#passwd").val();
+        if(name=='admin'&&pwd=='q1w2e3r4'){
+            window.location.href = "./admin.html"
+        }
+    }
+
+    $(function() {
+        $('#testDiv').fullpage({
+            'navigation': true,
+        });
+    });
+</script>
 </body>
 </html>

@@ -1,0 +1,22 @@
+/*login*/
+.login-layout {
+    background-color: white;
+}
+
+.login-navbar {
+    background-color: white;
+}
+
+.login-navbar .login-navbar-brand {
+    color: #428BCA
+}
+
+.index-background{
+    height: 80%;
+    background: url(img/index-first-background.png);
+    background-size: 100% 100%;
+}
+.main-container{
+    min-height: 650px;
+    overflow: hidden;
+}

@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <meta name="renderer" content="webkit|ie-stand|ie-comp" />
+    <title>ZX-UI</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <meta name="keywords" content="zxui"/>
+    <meta name="description" content="zxui"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="dep/ace/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="dep/ace/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="dep/ace/css/ui.jqgrid.css" />
+    <link rel="stylesheet" href="dep/ace/css/jquery.gritter.css" />
+    <link rel="stylesheet" href="dep/ace/css/select2.css" />
+    <link rel="stylesheet" href="dep/ace/css/datepicker.css" />
+    <link rel="stylesheet" href="dep/ace/css/bootstrap-timepicker.css" />
+    <link rel="stylesheet" href="dep/ace/css/daterangepicker.css" />
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="dep/ace/css/font-awesome-ie7.min.css"/>
+    <![endif]-->
+    <link rel="stylesheet" href="dep/ace/css/ace.min.css"/>
+    <link rel="stylesheet" href="dep/ace/css/ace-rtl.min.css"/>
+    <link rel="stylesheet" href="dep/ace/css/ace-skins.min.css"/>
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="dep/ace/css/ace-ie.min.css"/>
+    <![endif]-->
+    <script src="dep/ace/js/ace-extra.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="dep/ace/js/html5shiv.js"></script>
+    <script src="dep/ace/js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="src/css/main.css"/>
+
+</head>
+<body>
+<!--[if lt IE 8]>
+<p class="browsehappy">您使用的浏览器版本<strong>太低</strong>. 请<a
+        href="http://browsehappy.com/" style="color: red">升级</a>您的浏览器.
+</p>
+<![endif]-->
+<div ifly-src="src/tpl/index/navbar.html"></div>
+<div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try {
+            ace.settings.check('main-container', 'fixed')
+        } catch (e) {
+        }
+    </script>
+    <div class="main-container-inner">
+        <a class="menu-toggler" id="menu-toggler" href="#">
+            <span class="menu-text"></span>
+        </a>
+        <div class="sidebar" id="sidebar">
+            <div ifly-src="src/tpl/index/menu.html"></div>
+        </div>
+        <div class="main-content">
+        <div ifly-view ifly-src="src/tpl/index/content.html"></div>
+        </div>
+        <div ifly-src="src/tpl/index/settings.html"></div>
+    </div>
+    <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+        <i class="icon-double-angle-up icon-only bigger-110"></i>
+    </a>
+</div>
+<!--[if !IE]> -->
+<script src="dep/ace/js/jquery-2.0.3.min.js"></script>
+<!-- <![endif]-->
+<!--[if IE]>
+<script src="assets/js/jquery-1.10.2.min.js"></script>
+<![endif]-->
+<script type="text/javascript">
+    if ("ontouchend" in document) document.write("<script src='dep/ace/js/jquery.mobile.custom.min.js'>" + "<" + "script>");
+</script>
+<script>
+    $('[ifly-src]').each(function () {
+        $this = $(this);
+        var src = $this.attr('ifly-src');
+        $.ajax({
+            url: src,
+            async: false,
+            success: function (html) {
+                $this.html(html);
+            }
+        });
+    });
+</script>
+<script src="dep/ace/js/bootstrap.min.js"></script>
+<script src="dep/ace/js/typeahead-bs2.min.js"></script>
+<!--[if lte IE 8]>
+<script src="dep/ace/js/excanvas.min.js"></script>
+<![endif]-->
+<script src="dep/ace/js/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="dep/ace/js/jquery.ui.touch-punch.min.js"></script>
+<script src="dep/ace/js/jquery.slimscroll.min.js"></script>
+<script src="dep/ace/js/jquery.easy-pie-chart.min.js"></script>
+<script src="dep/ace/js/jquery.sparkline.min.js"></script>
+<script src="dep/ace/js/flot/jquery.flot.min.js"></script>
+<script src="dep/ace/js/flot/jquery.flot.pie.min.js"></script>
+<script src="dep/ace/js/flot/jquery.flot.resize.min.js"></script>
+<script src="dep/ace/js/jquery.maskedinput.min.js"></script>
+<script src="dep/ace/js/date-time/bootstrap-datepicker.min.js"></script>
+<script src="dep/ace/js/date-time/daterangepicker.min.js"></script>
+<script src="dep/ace/js/date-time/bootstrap-timepicker.min.js"></script>
+<script src="dep/ace/js/date-time/moment.min.js"></script>
+<script src="dep/ace/js/jquery.validate.min.js"></script>
+<script src="dep/ace/js/select2.min.js"></script>
+<script src="dep/ace/js/juicer.js"></script>
+<script src="dep/ace/js/jquery.hotkeys.min.js"></script>
+<script src="dep/ace/js/bootstrap-wysiwyg.min.js"></script>
+<script src="dep/ace/js/spin.min.js"></script>
+<script src="dep/crossroads/dev/lib/signals.js"></script>
+<script src="dep/crossroads/dist/crossroads.js"></script>
+<script src="dep/ace/js/ace-elements.min.js"></script>
+<script src="dep/ace/js/bootbox.min.js"></script>
+<script src="dep/ace/js/jquery.gritter.min.js"></script>
+<script src="src/js/common/ifly.js"></script>
+<script src="src/js/common/httpConfig.js"></script>
+<script src="dep/ace/js/ace.min.js"></script>
+<script src="src/js/common/router.js"></script>
+<script src="src/js/index/init.js"></script>
+<div data-spinner class="ifly-spinner"></div>
+</body>
+</html>
+

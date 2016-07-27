@@ -1,0 +1,19 @@
+{
+  "name": "ifly-front",
+  "version": "1.0.0",
+  "authors": [
+    "zxshen2"
+  ],
+  "moduleType": [
+    "es5"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*"
+  ],
+  "dependencies": {
+    "crossroads": "^0.12.2",
+    "nprogress": "^0.2.0"
+  }
+}

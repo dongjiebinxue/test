@@ -1,0 +1,102 @@
+<div>
+    <div class="searchFilter" style="overflow:auto">
+        <table class="group ui-widget ui-widget-content" ifly-filter
+               style="border:0px none;">
+            <tbody>
+            <tr class="error" style="display:none;">
+                <th colspan="5" class="ui-state-error" align="left"></th>
+            </tr>
+            <tr>
+                <th colspan="5" align="left"><select class="opsel">
+                    <option value="AND" selected="selected">与</option>
+                    <option value="OR">或</option>
+                </select>
+                    <span style="margin-left: 10px"></span>
+                    <input type="button"  value="+"
+                           title="Add rule"  ifly-filter-add
+                           class="add-rule ui-add btn btn-xs btn-primary">
+                </th>
+            </tr>
+            <tr data-tr>
+                <td class="first"></td>
+                <td class="columns">
+                    <select data-filed>
+                        {@each fields as field}
+                        <option value="${field.code}">${field.name}</option>
+                        {@/each}
+                    </select>
+                </td>
+                <td class="operators">
+                    <select class="selectopts" data-op>
+                        <option value="eq" selected="selected">等于</option>
+                        <option value="ne">不等</option>
+                        <option value="lt">小于</option>
+                        <option value="le">小于等于</option>
+                        <option value="gt">大于</option>
+                        <option value="ge">大于等于</option>
+                        <option value="bw">开始于</option>
+                        <option value="bn">不开始于</option>
+                        <option value="ew">结束于</option>
+                        <option value="en">不结束于</option>
+                        <option value="cn">包含</option>
+                        <option value="nc">不包含</option>
+                        <option value="in">属于</option>
+                        <option value="ni">不属于</option>
+                        <option value="nu">不存在</option>
+                        <option value="nn">存在</option>
+                    </select></td>
+                <td class="data">
+                    <input data-vo type="text" role="textbox"
+                           class="input-elm"
+                           style="width: 98%;">
+                </td>
+                <td>
+                    <input type="button" value="X" title="Delete rule"
+                           class="delete-rule ui-del" ifly-filter-del>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script type="text/template" data-filter-temp>
+    <tr>
+        <td class="first"></td>
+        <td class="columns">
+            <select data-filed>
+                {@each fields as field}
+                <option value="${field.code}">${field.name}</option>
+                {@/each}
+            </select>
+        </td>
+        <td class="operators">
+            <select class="selectopts" data-op>
+                <option value="eq" selected="selected">等于</option>
+                <option value="ne">不等</option>
+                <option value="lt">小于</option>
+                <option value="le">小于等于</option>
+                <option value="gt">大于</option>
+                <option value="ge">大于等于</option>
+                <option value="bw">开始于</option>
+                <option value="bn">不开始于</option>
+                <option value="ew">结束于</option>
+                <option value="en">不结束于</option>
+                <option value="cn">包含</option>
+                <option value="nc">不包含</option>
+                <option value="in">属于</option>
+                <option value="ni">不属于</option>
+                <option value="nu">不存在</option>
+                <option value="nn">存在</option>
+            </select></td>
+        <td class="data">
+            <input data-vo type="text" role="textbox"
+                   class="input-elm"
+                   style="width: 98%;">
+        </td>
+        <td>
+            <input type="button" value="X" title="Delete rule"
+                   class="delete-rule ui-del" ifly-filter-del>
+        </td>
+    </tr>
+</script>
+
