@@ -84,7 +84,7 @@
                                         <label class="block clearfix">
 														<span class="block input-icon input-icon-right">
 															<input type="text" id="username"
-                                                                   class="form-control"
+                                                                   class="form-control" vlaue="admin"
                                                                    placeholder="用户名"/>
 															<i class="icon-user"></i>
 														</span>
@@ -92,7 +92,7 @@
                                         <label class="block clearfix">
 														<span class="block input-icon input-icon-right">
 															<input type="password" id="passwd"
-                                                                   class="form-control"
+                                                                   class="form-control" vlaue="123"
                                                                    placeholder="密码"/>
 															<i class="icon-lock"></i>
 														</span>
@@ -414,7 +414,7 @@
     function login() {
         var name = $("#username").val();
         var pwd = $("#passwd").val();
-        if(name=='admin'&&pwd=='q1w2e3r4'){
+        if(name=='admin'&&pwd=='123'){
             window.location.href = "./admin.html"
         }
     }
